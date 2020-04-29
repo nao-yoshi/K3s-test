@@ -12,6 +12,8 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision :shell, path: "scripts/bootstrap.sh"
   config.vm.provision :shell, path: "scripts/update.sh"
+  config.vm.provision :shell, path: "scripts/docker.sh"
   config.vm.provision :shell, path: "scripts/k3s.sh"
   config.vm.provision :shell, path: "scripts/node.sh"
+  config.vm.provision :shell, path: "scripts/check.sh"
 end
