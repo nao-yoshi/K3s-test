@@ -7,7 +7,7 @@ This is the easiest way to test k3s with your PC. Also you can test docker opera
 
 
 ## Requirement
-Before you try it, you need to install some software listed below in your PC.
+Before you try it, you need to install some software listed below in your PC. I tested this on MAC OS. However Windows OS should be fine as well.
 - Git
 - Virtual Box
 
