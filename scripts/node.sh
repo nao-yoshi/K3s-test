@@ -1,10 +1,11 @@
 #!/bin/bash
-
-## Update
 echo "=========================================" 
-echo "Now Updating.........."
+echo "Start nodejs installation"
 echo "=========================================" 
-yum install -y update
+curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+sudo yum install epel-release
+sudo yum install nodejs npm
 echo "=========================================" 
-echo "Updating...... Done!"
+echo "nodejs version"
+node --version
 echo "=========================================" 
