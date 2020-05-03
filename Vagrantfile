@@ -3,7 +3,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.vm.hostname = "k3s"
-  config.vm.network "private_network", type: "dhcp" 
+  config.vm.network "private_network", ip: "192.168.100.10"
   config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.network "forwarded_port", guest: 8888, host: 8888
   config.vm.provider "virtualbox" do |vb|
