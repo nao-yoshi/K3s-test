@@ -1,42 +1,49 @@
-# Setup k3s environment in your PC
-This repo is for building a test environment of k3s in your PC.
+# Setup K3s environment on your PC
+This repo is for building a test environment of the Lightweight Kubernetes **[K3s](https://github.com/rancher/k3s/)** on your PC.
 
 
 ## Description
-This is the easiest way to test k3s with your PC. Also you can test docker operation as well.
+This is the easiest way to test K3s on your PC. With just one command, the K3s will be deployed on a VM (CentOS 7) running on VirtualBox. The VM inclueds several softwares such as:
+- K3s
+- Docker
+- node.js
 
 
 ## Requirement
-Before you try it, you need to install some software listed below in your PC. I tested this on MAC OS. However Windows OS should be fine as well.
+Before you try it, you need to install some softwares listed below on your PC (MAC OS or Windows OS).
 - Git
 - Virtual Box
+- Vagrant
 
 
 ## Usage
 You can deploy the test environment on your PC easily.
-1. Clone this repo into your PC.
-2. Move to the directory of this repo "k3s-test".
-3. Execute a command listed below to build the test environment.
-  ```
-  $ vagrant up
-  ```
-4. Wate for about 5 minutes. After that, a VM (CentOS) will be deployed on Virtual Box. 
-5. Execute a command listed below to login to the CentOS from a terminal on your PC. Your prompt must be "k3s-test" directory.
-  ```
-  $ vagrant ssh
-  ```
-6. Enjoy testing the k3s. 
+1. Open terminal.
+2. Clone this repo into your PC.
+   ```
+   $ git clone https://github.com/nao-yoshi/K3s-test.git
+   ```
+3. Move to the directory of this repo **"K3s-test"**. Then execute a command below to build the test environment.
+   ```
+   $ cd K3s-test
+   $ vagrant up
+   ```
+4. About 5 minutes later, a VM (CentOS) will be deployed on VirtualBox.
+5. Execute a command below to login to the VM (CentOS) from a terminal on your PC. At this moment, your prompt should be **"K3s-test"** directory.
+   ```
+   $ vagrant ssh
+   ```
 
 
 ## Clean up
 You can remove all of the test environment from your PC.
 
-1. Log off from VM(CentOS).
-2. Execute a command listed below at the directory "k3s-test".
-```
-$ vagrant destroy
-```
-3. Remove all of the software which were installed for this test.
+1. Log off from VM (CentOS).
+2. Execute a command below at the directory **"K3s-test"**.
+   ```
+   $ vagrant destroy
+   ```
+3. All of the VMs running on VirualBox will be removed.
 
 
 ## Author
